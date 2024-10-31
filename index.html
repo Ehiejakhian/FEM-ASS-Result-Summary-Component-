@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Title Icon-->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <!--GoogleFont-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--GoogleIcons-->
+    <!--Reaction-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!--Memory-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!--Verbal-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!--Visual-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    
+    <title>Frontend Mentor | Results summary component</title>
+
+    <!--StylesStartHere -->
+    <style>
+      /*GeneraL*/
+      * {
+        font-family: "Hanken Grotesk",sans-serif;
+        box-sizing: border-box;
+        margin: 0;
+      }
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      div.whole {
+        box-shadow: 10px 10px 10px hsla(234, 85%, 45%,.2);
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 50px;
+        flex-wrap: wrap;
+        padding: 0;
+      }
+      .iDoCare {
+        font-size: 1.25em;
+      }
+      .part1,.part2 {
+       /* border-radius: 40px;*/
+      }
+      /*Main Content*/
+         /*result*/
+      div.part1{
+        /*border-radius: 40px;*/
+      }
+      div.part1 p {
+        color: hsl(241, 100%, 89%);
+      }
+      div.part1 h2 {
+        color: white;
+      }
+      div.part1 :nth-child(1) {
+        font-weight: 700;
+        padding-bottom: 20px;
+      }
+      div.part1 :nth-child(4) {
+        padding-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      div.result {
+        background: linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+      }
+      div#h1score {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+        color: white;
+        padding: 40px;
+        border-radius: 100%;
+        margin-bottom: 20px;
+        width: 170px;
+        height: 170px;
+      }
+      div#h1score h1 {
+        font-size: 4em;
+      }
+      /*
+      div#h1score p {
+        margin-top: 0;
+      }
+      */
+      
+         /*summary*/
+      h2.iDoCare {
+        color: hsl(224, 30%, 27%);
+      }
+      div.part2 {
+        padding: 30px;
+      }
+      div.summary {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      div.part2 h2 {
+        text-align: left;
+      }
+      div.scores {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      div.attribute {
+        font-weight: 700;
+        margin-bottom: 20px;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 15px;
+        border-radius: 10px;
+      }
+      div.attribute div {
+        display: inline-block;
+      }
+       /*Attributes*/
+         div.attribute :nth-child(1) {
+           
+         }
+         div.reaction {
+           background: hsla(0, 100%, 67%,.1);
+         }
+           div.reaction :nth-child(1) {
+             color: hsl(0, 100%, 67%);
+           }
+         div.memory {
+           background: hsla(39, 100%, 56%,.1);
+         }
+           div.memory :nth-child(1) {
+             color: hsl(39, 100%, 56%);
+           }
+         div.verbal {
+           background: hsla(166, 100%, 37%,.1);
+         }
+           div.verbal :nth-child(1) {
+             color: hsl(166, 100%, 37%);
+           }
+         div.visual {
+           background: hsla(234, 85%, 45%,.1);
+         }
+           div.visual :nth-child(1) {
+             color: hsl(234, 85%, 45%);
+           }
+      div#FF {
+        display: flex;
+        align-items: flex-start;
+      }
+      div#FF span {
+        padding-right: 10px;
+      }
+      div#TT span {
+        color: grey;
+      }
+      button {
+        border-radius: 20px;
+        border: none;
+        padding: 10px;
+        margin-top: 20px;
+        width: 100%;
+        background: hsl(224, 30%, 27%);
+      }
+      button a {
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
+        font-weight: 800;
+      }
+      /*Footer*/
+      .attribution { 
+        font-size: 11px; 
+        text-align: center; 
+      }
+      .attribution a { 
+        color: hsl(228, 45%, 44%); 
+      }
+      .attribution a:active { 
+        text-decoration-color: white; 
+        background: black;
+        text-decoration: underline;
+        color: crimson;
+        padding: 10px;
+      }
+      @media (max-width: 500px) {
+        div.result, div.part2 {
+          width: 100%;
+        }
+        div.whole {
+          border-radius: 20px;
+          width: 80%;
+        }
+      }
+      @media (min-width: 500px){
+        div.result, div.part2 {
+          width: 50%;
+          border-radius: 30px;
+        }
+        div.whole {
+          max-width: 600px;
+          border-radius: 30px;
+        }
+      }
+      
+      /*
+      div.both-width {
+        width: 350px;
+      }
+      */
+    </style>
+
+  </head>
+  
+  <body>
+    <div class="whole">
+      <div class="result part1 both-width">
+        <p class="iDoCare">Your Result</p>
+        <div id="h1score">
+          <h1>76</h1>
+          <p style="opacity: .5">of 100</p>
+        </div>
+        <h2>Great</h2>
+        <p>
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </div>
+      
+      <div class="part2 both-width">
+        <h2 class="iDoCare">Summary</h2>
+        <div class="summary">
+          <div class="scores">
+            <div class="reaction attribute">
+              <div id="FF">
+                <span class="material-symbols-outlined">bolt</span>Reaction
+              </div>
+              <div id="TT">80 <span>/ 100</span></div>
+            </div>
+            
+            <div class="memory attribute">
+              <div id="FF">
+                <span class="material-symbols-outlined">neurology</span>Memory
+              </div>
+              <div id="TT">92 <span>/ 100</span></div>
+            </div>
+            
+            <div class="verbal attribute">
+              <div id="FF">
+                <span class="material-symbols-outlined">sms</span>Verbal
+              </div>
+              <div id="TT">61 <span>/ 100</span></div>
+            </div>
+            
+            <div class="visual attribute">
+              <div id="FF">
+                <span class="material-symbols-outlined">visibility</span>Visual
+              </div>
+              <div id="TT">72 <span>/ 100</span></div>
+            </div>
+          </div>
+          <button><a href="#">Continue</a></button>
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">EhiEjakhian</a>.
+    </div>
+
+  </body>
+</html>
